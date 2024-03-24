@@ -34,7 +34,7 @@ const postRoutes = require("./routes/postRoutes");
 const authMiddleware = require("./middleware/authMiddleware");
 
 app.use("/api/users", userRoutes);
-app.use("/api/posts",authMiddleware, postRoutes);
+app.use("/api/posts", postRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
